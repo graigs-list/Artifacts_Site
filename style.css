@@ -36,16 +36,26 @@ h1 {
     color: var(--text-color);
     position: fixed;
     left: 20px;
-    top: 20px;
+    top: 15px;
+}
+
+#title>h6 {
+    font-family: "Inter", sans-serif;
+    color: var(--text-color);
+    position: fixed;
+    left: 20px;
+    top: 25px;
 }
 
 #title>#buttons {
     position: fixed;
-    left: 20%;
-    top: 28px;
-    width: 60%;
+    left: 25%;
+    top: 21.5px;
+    width: 50%;
     display: flex;
     justify-content: space-around;
+    align-content: center;
+    align-items: center;
 }
 
 @keyframes buttons-out {
@@ -63,6 +73,12 @@ h1 {
     animation-name: buttons-out;
     animation-duration: 0.5s;
     color: var(--inactive-color);
+}
+
+#title>#buttons>div {
+    background-color: var(--inactive-color);
+    width: 1px;
+    height: 40px;
 }
 
 @keyframes buttons-in {
