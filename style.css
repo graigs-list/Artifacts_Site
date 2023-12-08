@@ -8,13 +8,24 @@
     --text-color: #ffffff;
     --inactive-color: #4f4f4f;
     --accent-color: #111111;
+    --item-color: #252525;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 body {
     background-color: var(--bg-color);
 
-    padding: var(--default-padding);
-    margin: var(--default-padding);
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
 
     user-select: none;
 }
@@ -30,8 +41,14 @@ p {
     font-family: "Noto Serif", serif;
 }
 
+a {
+    text-decoration: none;
+}
+
 #spacer {
-    margin-top: 6%;
+    padding: 0 0 0 0;
+    color: var(--bg-color);
+    margin-top: 41px;
 }
 
 #title {
@@ -104,4 +121,10 @@ p {
     animation-name: buttons-in;
     animation-duration: 0.5s;
     color: var(--text-color);
+}
+
+.item {
+    width: 100%;
+    height: 1024px;
+    background-color: var(--item-color);
 }
