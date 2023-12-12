@@ -4,19 +4,19 @@
 :root {
     --default-padding: 0;
 
-    --bg-color: #1f1f1f;
+    --item-color: #1f1f1f;
     --text-color: #ffffff;
     --inactive-color: #4f4f4f;
     --accent-color: #111111;
-    --item-color: #252525;
+    --bg-color: var(--accent-color);
 }
 
 html::-webkit-scrollbar {
     display: none;
 }
 
-html {
-    scroll-behavior: smooth;
+*, html {
+    scroll-behavior: smooth !important;
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
@@ -102,12 +102,6 @@ a {
     color: var(--inactive-color);
 }
 
-#title>#buttons>div {
-    background-color: var(--inactive-color);
-    width: 1px;
-    height: 40px;
-}
-
 @keyframes buttons-in {
     from {
         color: var(--inactive-color);
@@ -117,6 +111,12 @@ a {
     }
 }
 
+#title>#buttons>div {
+    background-color: var(--inactive-color);
+    width: 1px;
+    height: 40px;
+}
+
 #title>#buttons>a:hover {
     animation-name: buttons-in;
     animation-duration: 0.5s;
@@ -124,6 +124,7 @@ a {
 }
 
 .item {
+    margin-top: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -134,6 +135,7 @@ a {
 }
 
 .item>h2 {
+    scroll-margin-top: 98px;
     margin-top: 20px;
 }
 
